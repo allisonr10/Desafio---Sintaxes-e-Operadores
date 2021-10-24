@@ -9,19 +9,14 @@ Retorne uma string dizendo "Os números num1 e num2 não/são iguais. Sua soma �
 function comparar(num1,num2){
     let soma = 0
     soma = num1 + num2
-    if(num1 === num2){
-       console.log(`Os números ${num1} e ${num2} são iguais`)
-    }else{
-        console.log(`Os números ${num1} e ${num2} não são iguais`)
-    }
+    const resultado = num1 === num2 ? 'são iguais' : 'são diferentes'
+   
     if(soma < 10){
-        console.log(`Sua soma é ${soma}, que é menor que 10 e menor que 20`)
+        console.log(`Os números ${num1} e ${num2} ${resultado}. Sua soma é ${soma}, que é menor que 10 e menor que 20`)
     }else if(soma > 10 && soma < 20){
-        console.log(`Sua soma é ${soma}, que é maior que 10 e menor que 20`)
+        console.log(`Os números ${num1} e ${num2} ${resultado}. Sua soma é ${soma}, que é maior que 10 e menor que 20`)
     }else if(soma === 20){
-        console.log(`Sua soma é ${soma}, que é maior que 10`)
+        console.log(`Os números ${num1} e ${num2} ${resultado}. Sua soma é ${soma}, que é maior que 10`)
     }
-    
 }
-
-comparar(10,10)
+comparar(10,9)
